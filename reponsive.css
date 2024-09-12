@@ -1,0 +1,178 @@
+/* Hamburger icon (3 gạch) */
+.hamburger-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #635F85;
+}
+
+
+
+
+@media (max-width: 920px) {
+    .footer{
+        height: 100%;
+    }
+    .footer_section{
+        gap: 30px;
+    }
+}
+
+
+/* Responsive style */
+@media (max-width: 850px) {
+
+    .menu {
+        display: none;
+        flex-direction: column; 
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+    /* box-content */
+    .box_content{
+        display: block;
+    }
+    /* logo_under */
+    .logo_under{
+        display: none;
+    }
+    /* footer */
+    footer{
+        height: 100%;
+    }
+    .footer_section{
+        margin-top: 40px;
+        display: block;
+        height: 100%;
+    }
+    /* newsletter */
+    .newsletter_container{
+        display: block;
+        width: 90%;
+    }
+    .newsletter{
+        display: flex;
+        justify-content: center;
+    }
+    .text_newsletter_box{
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    /* card_content */
+    .card_content{
+        width: 100%;
+        height: 100%;
+    }
+    .card_body{
+        height: 100%;
+    }
+    .card_body_2{
+        height: 100%;
+    }
+    .card_body_2 h3{
+        font-size: 17px;
+    }
+    .card_body_2 p{
+        font-size: 12px;
+    }
+    .card_body_2 img {
+        height: 100%;
+    }
+    /* .card_content_header {
+        width: 100%;
+        height: 100%;
+    } */
+     .text{
+        /* display: block; */
+        width: 100%;
+        margin-left: 0;
+     }
+     .text section{
+        width: 100%;
+     }
+     .text_box{
+        /* margin-left: 10px; */
+        /* padding-left: ; */
+        width: 75%;
+     }
+    .text_box_resize{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navigation_text{
+        width: 75%;
+    }
+    .navigation_text_resize{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+    }
+    .card_resize{
+        display: flex;
+        justify-content: center;
+    }
+    .text_newsletter_box_resize{
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .newsletter h1{
+        font-size: 30px;
+    }
+    .newsletter p{
+        font-size: 14px;
+    }
+    .text{
+        margin-top: 0;
+        height: 100%;
+    }
+    .text_newsletter_box_resize p{
+        white-space: normal;
+        /* width: 100%; */
+
+    }
+    /* .text_newsletter_box{
+        margin-top: 0;
+        margin-left: 0;
+    } */
+    .text_newsletter{
+        width: 100%;
+    }
+    .email_button{
+        width: 100%;
+    }
+    .email_form_box  input{
+        width: 100%;
+    }
+
+}
+@media (max-width: 400px) {
+    body {
+        width: 400px;
+        overflow-x: hidden;
+    }
+    .text_watch_video{
+        display: none;
+    }
+}
+
+/* class="text_newsletter_box" */
+
+
