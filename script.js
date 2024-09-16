@@ -59,6 +59,9 @@ document.addEventListener('click', function(e) {
 //Sign_Up
 document.querySelector('.sign_up').onclick = function(){
     document.querySelector('.signup_popup').style.display = 'block'
+
+    const inputs = document.querySelectorAll('.signup_popup input');
+    inputs.forEach(input => input.value = '');
 }
 document.querySelector('.signup_popup').onclick = function(e){
     const form = document.querySelector('.form')
