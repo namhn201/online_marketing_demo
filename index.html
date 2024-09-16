@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 
 
 </head>
@@ -23,12 +24,42 @@
         </video>
     </div>
     <div class="signup_popup">
-
-
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Sign Up</h3>
+        
+            <div class="spacer"></div>
+        
+            <div class="form-group">
+              <label for="fullname" class="form-label">Fullname</label>
+              <input id="fullname" name="fullname" type="text" placeholder="Ex: Your Name" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="text" placeholder="Ex: email@domain.com" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input id="password" name="password" type="text" placeholder="Password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+              <span class="form-message"></span>
+            </div>
+        
+            <div class="form-group">
+              <label for="password_confirmation" class="form-label">Confirm Password</label>
+              <input id="password_confirmation" name="password_confirmation" placeholder="Confirm Password" type="text" class="form-control">
+              <span class="form-message"></span>
+            </div>
+        
+            <button class="form-submit">Sign Up</button>
+          </form>
     </div>
+    
     <header>
-        <div class="navigation">
-            
+        <div class="navigation_text_resize">
+            <div class="navigation">
                 <div class="logo">
                     <img src="./image/Union.svg" alt="">
                     <h3>Beyond</h3>
@@ -66,6 +97,9 @@
                     &#9776;
                 </div>
         </div>
+
+        </div>
+     
 
         <!-- Box_content_1_header -->
         <div class="box_content">
@@ -310,10 +344,24 @@
                         </div>
     
                     </div>
+                     <div class="card_body_2">
+                        <div class="card_body_content_2">
+                            <img src="./image/./Rectangle 4934.png" alt="">
+                            <h3>Media Marketing</h3>
+                            <p>
+                                Twit are excet  Frond, rnatie boy 
+                                grub it's tell gone to pot MI Mrs nut 
+                                butts horse play blow 
+                            </p>
+                        </div>
+    
+                    </div>
     
                 </div>
     
             </div>
+            <button id="prev" class="nav">Previous</button>
+            <button id="next" class="nav">Next</button>
             
         </div>
         
@@ -397,5 +445,21 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        Validator({
+            form: '#form-1',
+            errormessage: '.form-message',
+            rule:[
+                Validator.isRequired('#fullname'),
+                // Validator.isRequired('#email'),
+                Validator.isMail('#email'),
+
+                Validator.isPassword('#password'),
+                // Validator.isRequired('#password'),
+                Validator.isPasswordConfirm('#password_confirmation', getValue => document.querySelector('#password').value)
+            ]
+
+        })
+    </script>
 </body>
 </html>

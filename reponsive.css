@@ -1,4 +1,3 @@
-/* Hamburger icon (3 gạch) */
 .hamburger-icon {
     display: none;
     font-size: 30px;
@@ -21,7 +20,9 @@
 
 /* Responsive style */
 @media (max-width: 850px) {
-
+    .menu_resize{
+        display: none;
+    }
     .menu {
         display: none;
         flex-direction: column; 
@@ -30,7 +31,7 @@
         left: 0;
         width: 100%;
         background-color: white;
-        text-align: center;
+        /* text-align: center; */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
@@ -39,7 +40,9 @@
     }
 
     .hamburger-icon {
-        display: block;
+        display: flex;
+        /* width: 30%; */
+        justify-content: center;
     }
     /* box-content */
     .box_content{
@@ -116,6 +119,15 @@
     .navigation_text{
         width: 75%;
     }
+    /* .navigation_text_resize{
+    } */
+    .navigation{
+        /* width: 100%; */
+        display: flex;
+        /* justify-content: center; */
+        /* gap: 10px; */
+        /* box-sizing: border-box;   */
+     }
     .navigation_text_resize{
         display: flex;
         justify-content: center;
@@ -131,6 +143,52 @@
     .text_newsletter_box_resize{
         width: 100%;
     }
+    /* //button_header */
+    .button_header{
+        display: flex;
+        justify-content: center;
+        transition: 0;
+
+    }
+    .button_header button{
+        width: 100%;
+        /* font-size: 12px; */
+        white-space: nowrap;
+        transition: 0;
+
+    }
+    
+    .login{
+        width: 100%;
+    }
+    .sign_up{
+        width: 100%;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    /* .video_box{
+        width: 100%;
+    } */
+    .video_box video{
+        width: 90%;
+    }
+    .email_form_box{
+        width: 90%;
+    }
+    .email_button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .signup_popup .form{
+        min-width: 300px;
+        /* box-sizing: border-box; */
+        transition: all 0.4 ease-in-out;
+        left: 45%;
+    }
+
 }
 @media (max-width: 500px) {
     .newsletter h1{
@@ -161,7 +219,20 @@
     .email_form_box  input{
         width: 100%;
     }
+    .button_header button{
+        font-size: 12px;
+        transition: 0;
 
+    }
+
+}
+@media (max-width: 460px) {
+    .button_header button{
+        font-size: 12px;
+        transition: 0;
+
+    }
+   
 }
 @media (max-width: 400px) {
     body {
@@ -170,6 +241,9 @@
     }
     .text_watch_video{
         display: none;
+    }
+    .menu.show{
+        width: 400px;
     }
 }
 
