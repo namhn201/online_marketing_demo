@@ -19,7 +19,7 @@
 
 
 /* Responsive style */
-@media (max-width: 850px) {
+@media (max-width: 854px) {
     .menu_resize{
         display: none;
     }
@@ -37,6 +37,7 @@
 
     .menu.show {
         display: flex;
+        margin-top: 10px;
     }
 
     .hamburger-icon {
@@ -224,17 +225,32 @@
         transition: 0;
 
     }
+    .logo h3{
+        margin-left: 0;
+    
+    }
+    /* .logo{} */
 
 }
 @media (max-width: 460px) {
     .button_header button{
         font-size: 12px;
         transition: 0;
-
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 84%;
+    }
+    .card_body_content_2 img{
+        width: 100%;
+    }
+    .card_body_2{
+        width: 100%;
     }
    
 }
-@media (max-width: 400px) {
+@media (max-width: 435px) {
     body {
         width: 400px;
         overflow-x: hidden;
@@ -245,8 +261,57 @@
     .menu.show{
         width: 400px;
     }
-}
 
+    /* SidebarMenu cho mobie */
+    .menu {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: -400px; /* Đưa menu ra ngoài màn hình */
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+        transition: left 0.3s ease; /* Thay đổi hiệu ứng chuyển đổi */
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: right;
+        align-items: start;
+        padding: 20px;
+    }
+    .menu.show {
+        left: 0; /* Hiển thị menu khi kéo vào */
+        width: 300px;
+        margin-top: 0px
+    }
+    .menu.show p{
+        color: #F67102;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    .menu_title{
+        display: block;
+        border-bottom: 1px solid rgb(213, 210, 210);
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu_icon_container {
+        display: block; /* Hiển thị hamburger icon */
+    }
+    
+    .hamburger-icon {
+        display: flex;
+    }
+    
+}
+@media (max-width: 435px) {
+    body{
+        min-width: 435px;
+    }
+
+}
 /* class="text_newsletter_box" */
 
 

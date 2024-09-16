@@ -1,9 +1,36 @@
 
-//reponsive
-function toggleMenu() {
-    var menu = document.querySelector('.menu');
-    menu.classList.toggle('show');
-}
+    //reponsive header and icon menu
+    function toggleMenu() {
+        var menu = document.querySelector('.menu');
+        menu.classList.toggle('show');
+    }
+    function toggleTitleMenu() {
+        var menu = document.querySelector('.menu');
+        var icon = document.querySelector(".hamburger-icon");
+        icon.classList.remove("clicked");
+        icon.classList.remove('change');
+        menu.classList.toggle('show');
+    }
+
+
+    var icon = document.querySelector(".hamburger-icon");
+    icon.addEventListener("click", () => {
+    icon.classList.toggle("clicked");
+    });
+
+    var icon = document.querySelector('.hamburger-icon');
+    icon.classList.toggle('change');
+    document.addEventListener("click", (event) => {
+        var menu = document.querySelector('.menu');
+        var icon = document.querySelector(".hamburger-icon");
+    
+        if (!menu.contains(event.target) && !icon.contains(event.target)) {
+            menu.classList.remove('show');
+            icon.classList.remove("clicked");
+            icon.classList.remove('change');
+        }
+    });
+
 document.querySelector('.button_circle').onclick = function () {
     document.getElementById('video').play();
     document.querySelector('.video_box').style.display = 'block'
@@ -55,6 +82,7 @@ document.addEventListener('click', function(e) {
         document.getElementById('accountOptions').style.display = 'none';
     }
 });
+
 
 //Sign_Up
 document.querySelector('.sign_up').onclick = function(){
