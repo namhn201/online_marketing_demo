@@ -117,31 +117,6 @@ document.querySelector('#button_get_2_main').onclick = function(){
 document.querySelector('#button_get_3_main').onclick = function(){
     alert('Comming Soon')
 }
-//Slider
-const card = document.querySelector('.card');
-let currentIndex = 0;
-
-document.getElementById('next').addEventListener('click', function() {
-    console.log("NEXT CHƯA")
-    if (currentIndex < 3) { // Có 3 slides nên tối đa là 2
-        currentIndex++;
-    } else {
-        console.log("current index ", currentIndex);
-        
-        currentIndex = 0;
-    }
-    card.style.transform = `translateX(-${currentIndex * 33.33}%)`;
-});
-
-document.getElementById('prev').addEventListener('click', function() {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = 2;
-    }
-    card.style.transform = `translateX(-${currentIndex * 33.33}%)`;
-});
-
 
 ///Validator
 
